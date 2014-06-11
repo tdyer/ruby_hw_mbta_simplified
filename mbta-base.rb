@@ -17,17 +17,15 @@ end_line = gets.chomp.to_sym
 puts 'Which station are you getting off?'
 end_station = gets.chomp
 
-if start_line == end_line
-  start_station_index = LINES[start_line].index(start_station)
-  end_station_index = LINES[end_line].index(end_station)
+start_station_index = LINES[start_line].index(start_station)
+end_station_index = LINES[end_line].index(end_station)
 
+if start_line == end_line
   total_distance = (start_station_index - end_station_index).abs
 else
-  start_station_index = LINES[start_line].index(start_station)
   intersection_index_on_start_line = LINES[start_line].index(INTERSECTION)
   first_leg_distance = (start_station_index - intersection_index_on_start_line).abs
 
-  end_station_index = LINES[end_line].index(end_station)
   intersection_index_on_end_line = LINES[end_line].index(INTERSECTION)
   second_leg_distance = (end_station_index - intersection_index_on_end_line).abs
 
