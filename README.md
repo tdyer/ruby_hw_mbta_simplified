@@ -21,13 +21,13 @@ Suppose we have a subway system with the following lines and stops:
   * Arlington
   * Copley
 * **Orange Line**
-  * North Station
-  * Haymarket
-  * Park Street
-  * State Street
-  * Downtown Crossing
-  * Chinatown
-  * Tufts Medical Center
+      * North Station
+      * Haymarket
+      * Park Street
+      * State Street
+      * Downtown Crossing
+      * Chinatown
+      * Tufts Medical Center
 
 All lines intersect at **Park Street**, but not at any other stops. Unlike in real life, the "Haymarket" on the Green Line and the "Haymarket" on the Orange Line are two separate, unconnected stops.
 
