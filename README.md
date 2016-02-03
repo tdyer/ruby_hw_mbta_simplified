@@ -29,7 +29,7 @@ Suppose we have a subway system with the following lines and stops:
   * Chinatown
   * Tufts Medical Center
 
-All lines intersect at **Park Street**, but not at any other stops. Unlike in real life, the "Haymarket" on the Green Line and the "Haymarket" on the Orange Line are two separate, unconnected stops.
+All lines intersect at **Park Street**, but not at any other stops. Unlike in real life, the "Haymarket" on the Green Line and the "Haymarket" on the Orange Line are two separate, unconnected stops. __This is ONLY an approximation on Boston's T System.__
 
 Given this subway system, write a Ruby program that prompts the user for an "origin" stop and a "destination" stop, and tells them the number of stops they would have to make on that journey. For instance, traveling from Central to Copley would be 5 stops.
 
@@ -38,9 +38,9 @@ Given this subway system, write a Ruby program that prompts the user for an "ori
 
 ## Instructions
 
-Refer to the instructions in the [Guess the Number homework](https://github.com/ga-wdi-boston/wdi_1_ruby_hw_number_guess) for the general steps involved in completing and turning in assignments.
+Refer to the instructions in the [Guess the Number homework](https://github.com/tdyer/wdi_1_ruby_hw_number_guess) for the general steps involved in completing and turning in assignments.
 
-Use methods to make your code better, with each method doing a single and small task if possible. Don't try to get too clever with methods however, and sometimes you simply need two separate methods to do two different tasks!
+Avoid the use of methods, __until we have covered Ruby Methods__.
 
 ## Specifications
 
