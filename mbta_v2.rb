@@ -45,6 +45,4 @@ end
 
 num_stops = origin_stop - destination_stop
 num_stops = num_stops.abs - 0
-puts "This is your itinerary:"
-puts "You're taking the #{origin_line} line from #{origin_stop} to #{destination_stop} on the #{destination_line} line."
 puts "This will take #{num_stops} stops"
