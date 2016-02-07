@@ -41,8 +41,35 @@ end
 puts "What line do you want to end on? red | orange | green: "
 destination_line = gets.chomp!.to_s
 
-puts "What stop are you getting off at?: "
-destination_stop = gets.chomp!.to_s
+if destination_line == 'red'
+  puts  "What stop are you getting off at?
+  * Alewife
+  * Davis
+  * Porter
+  * Harvard
+  * Central
+  * Kendall/MIT
+  * Park Street
+  * South Station"
+elsif destination_line == 'orange'
+  puts "What stop are you getting off at?
+  * North Station
+  * Haymarket
+  * Park Street
+  * State Street
+  * Downtown Crossing
+  * Chinatown
+  * Tufts Medical Center"
+elsif destination_line == 'green'
+  puts "What stop are you getting off at?
+  * Haymarket
+  * Government Center
+  * Park Street
+  * Boylston
+  * Arlington
+  * Copley"
+end
+  destination_stop = gets.chomp!.downcase.to_s
 
 puts origin_line
 puts origin_stop
