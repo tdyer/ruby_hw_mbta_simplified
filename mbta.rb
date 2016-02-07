@@ -71,7 +71,5 @@ elsif destination_line == 'green'
 end
   destination_stop = gets.chomp!.downcase.to_s
 
-puts origin_line
-puts origin_stop
-puts destination_line
-puts destination_stop
+puts "This is your itinerary:"
+puts "You're taking the #{origin_line} line from #{origin_stop} to #{destination_stop} on the #{destination_line} line."
