@@ -20,3 +20,19 @@ elsif origin_line == 'orange'
   origin_stop = gets.chomp!.to_s
 end
 
+puts "What line are you getting off on? red | orange | green: "
+destination_line = gets.chomp!.to_s
+
+if destination_line == 'red'
+  puts "What stop are you getting on at? "
+  red.each_key {|key| puts key}
+  destination_stop = gets.chomp!.to_s
+elsif destination_line == 'green'
+  puts "What stop are you getting on at? "
+  green.each_key {|key| puts key}
+  destination_stop = gets.chomp!.to_s
+elsif destination_line == 'orange'
+  puts "What stop are you getting on at? "
+  orange.each_key {|key| puts key}
+  destination_stop = gets.chomp!.to_s
+end
