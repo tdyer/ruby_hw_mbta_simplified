@@ -8,7 +8,7 @@ puts "Welcome to the MBTA!"
 puts "What line do you want to start on? red | orange | green: "
 origin_line = gets.chomp!.downcase.to_s
 
-while origin_line == 'red'
+if origin_line == 'red'
   puts  "What stop are you getting on at?
   * Alewife
   * Davis
@@ -18,9 +18,8 @@ while origin_line == 'red'
   * Kendall/MIT
   * Park Street
   * South Station"
-  origin_stop = gets.chomp!.downcase.to_s
-  while origin_line == 'orange'
-    puts "What stop are you getting on at?
+elsif origin_line == 'orange'
+  puts "What stop are you getting on at?
   * North Station
   * Haymarket
   * Park Street
@@ -28,19 +27,16 @@ while origin_line == 'red'
   * Downtown Crossing
   * Chinatown
   * Tufts Medical Center"
-  origin_stop = gets.chomp!.downcase.to_s
-    while origin_line == 'green'
-      puts "What stop are you getting on at?
+elsif origin_line == 'green'
+  puts "What stop are you getting on at?
   * Haymarket
   * Government Center
   * Park Street
   * Boylston
   * Arlington
   * Copley"
-  origin_stop = gets.chomp!.downcase.to_s
-    end
-  end
 end
+  origin_stop = gets.chomp!.downcase.to_s
 
 puts "What line do you want to end on? red | orange | green: "
 destination_line = gets.chomp!.to_s
