@@ -10,14 +10,17 @@ if origin_line == 'red'
   puts "What stop are you getting on at? "
   red.each_key {|key| puts key}
   origin_stop = gets.chomp!.to_s
+  origin_stop = red[origin_stop]
 elsif origin_line == 'green'
   puts "What stop are you getting on at? "
   green.each_key {|key| puts key}
   origin_stop = gets.chomp!.to_s
+  origin_stop = green[origin_stop]
 elsif origin_line == 'orange'
   puts "What stop are you getting on at? "
   orange.each_key {|key| puts key}
   origin_stop = gets.chomp!.to_s
+  origin_stop = orange[origin_stop]
 end
 
 puts "What line are you getting off on? red | orange | green: "
@@ -27,12 +30,21 @@ if destination_line == 'red'
   puts "What stop are you getting on at? "
   red.each_key {|key| puts key}
   destination_stop = gets.chomp!.to_s
+  destination_stop = red[destination_stop]
 elsif destination_line == 'green'
   puts "What stop are you getting on at? "
   green.each_key {|key| puts key}
   destination_stop = gets.chomp!.to_s
+  destination_stop = green[destination_stop]
 elsif destination_line == 'orange'
   puts "What stop are you getting on at? "
   orange.each_key {|key| puts key}
   destination_stop = gets.chomp!.to_s
+  destination_stop = orange[destination_stop]
 end
+
+num_stops = origin_stop - destination_stop
+num_stops = num_stops.abs - 0
+puts "This is your itinerary:"
+puts "You're taking the #{origin_line} line from #{origin_stop} to #{destination_stop} on the #{destination_line} line."
+puts "This will take #{num_stops} stops"
