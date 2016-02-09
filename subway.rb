@@ -81,3 +81,4 @@ else
 end
 
 puts "\nTraveling from #{originStation.capitalize} to #{destinationStation.capitalize} would be #{distance} stops.\n\n"
+
