@@ -35,7 +35,10 @@ destination_stop = gets.chomp!.downcase
 # Figuring out the distance
 # if same line, count distance between stops
 
-if origin_line == destination_line && origin_line == 'orange' && destination_line == 'orange'
-  count_stops = orange_line.index() - orange_line.index('destination_stop')
-puts "You have to go #{count_stops} stops on the Orange Line"
+if origin_line == destination_line
+  count_stops = (originArray.index(origin_stop) - destinationArray.index(destination_stop))
+#puts "You have to go #{count_stops} stops on the #{origin_line}"
+else count_stops = (originArray.index(origin_stop) - originArray.index("park street"))
+	count_stops += (destinationArray.index(destination_stop) - destinationArray.index("park street"))
 end
+puts "To go from #{origin_stop} on the #{origin_line} line to #{destination_stop} on the #{destination_line} line will take #{count_stops}"
