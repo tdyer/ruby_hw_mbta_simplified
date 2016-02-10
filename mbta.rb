@@ -1,4 +1,4 @@
-#populate the MBTA lines
+# populate the MBTA lines
 red_line = ["alewife", "davis", "porter", "harvard", "central", "kendall/mit", "park street", "south station"]
 
 green_line = ["haymarket", "government center", "park street", "boylston", "arlington", "copley"]
@@ -14,28 +14,26 @@ mbta["orange"] = orange_line
 # Get the user's origin line
 puts "Welcome to the MBTA!"
 print "What line do you want to start on? red | orange | green: "
-origin_line = gets.chomp!
-origin_line.downcase!
+origin_line = gets.chomp!.downcase!
 
 
 # Get the user's origin station
 # Simplified station selector
 print "What station do you want to get on on the #{origin_line} line? "
-origin_stop = gets.chomp!
-origin_stop.downcase!
+origin_stop = gets.chomp!.downcase!
+
 origin_line.to_s
 originArray = mbta[origin_line]
 
-#Get the user's destination station
+# Get the user's destination station
 print "What line do you want to end on? red | orange | green: "
-destination_line = gets.chomp!
-destination_line.downcase!
+destination_line = gets.chomp!.downcase!
 
 
 # Get the users' destination stop
 print "What station do you want to get on on the #{destination_line} line? "
-destination_stop = gets.chomp!
-destination_stop.downcase!
+destination_stop = gets.chomp!.downcase!
+
 destination_line.to_s
 destinationArray = mbta[destination_line]
 
@@ -43,9 +41,11 @@ destinationArray = mbta[destination_line]
 # if same line, count distance between stops
 
 if origin_line == destination_line
-   count_stops = (originArray.index(origin_stop) - destinationArray.index(destination_stop)).abs
+  count_stops = (originArray.index(origin_stop) - destinationArray.index(destination_stop)).abs
+  # If different, find each distance to park street and add together
 else
-   distance = (originArray.index(origin_stop) - originArray.index("park street")).abs
-   distance += (destinationArray.index(destination_stop) - destinationArray.index("park street")).abs
+  count_stops = (originArray.index(origin_stop) - originArray.index("park street")).abs
+  count_stops  += (destinationArray.index(destination_stop) - destinationArray.index("park street")).abs
 end
-puts "To go from #{origin_stop} on the #{origin_line} line to #{destination_stop} on the #{destination_line} line will take #{count_stops} stops"
+
+puts "To go from #{origin_stop} on the #{origin_line} line to #{destination_stop} on the #{destination_line} line will take #{count_stops} stops."
