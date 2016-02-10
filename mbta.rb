@@ -22,45 +22,18 @@ print "What station do you want to get on on the #{origin_line} line?"
 origin_stop = gets.chomp!.downcase
 
 #Get the user's destination station
-puts "What line do you want to end on? red | orange | green: "
-destination_line = gets.chomp!.to_s
+print "What line do you want to end on? red | orange | green: "
+destination_line = gets.chomp!.downcase
 
-if destination_line == 'red'
-  puts  "What stop are you getting off at?
-  * Alewife
-  * Davis
-  * Porter
-  * Harvard
-  * Central
-  * Kendall/MIT
-  * Park Street
-  * South Station"
-elsif destination_line == 'orange'
-  puts "What stop are you getting off at?
-  * North Station
-  * Haymarket
-  * Park Street
-  * State Street
-  * Downtown Crossing
-  * Chinatown
-  * Tufts Medical Center"
-elsif destination_line == 'green'
-  puts "What stop are you getting off at?
-  * Haymarket
-  * Government Center
-  * Park Street
-  * Boylston
-  * Arlington
-  * Copley"
-end
-  destination_stop = gets.chomp!.to_s
-  destination_stop = red[destination_stop] || destination_stop = green[destination_stop] || destination_stop = green[destination_stop]
+# Get the users' destination stop
+print "What station do you want to get on on the #{origin_line} line?"
+destination_stop = gets.chomp!.downcase
 
 #puts "This is your itinerary:"
 #puts "You're taking the #{origin_line} line from #{origin_stop} to #{destination_stop} on the #{destination_line} line."
 
 # Figuring out the distance
-# if same line, count distance between
+# if same line, count distance between stops
 
 if origin_line == destination_line && origin_line == 'orange' && destination_line == 'orange'
   count_stops = orange_line.index() - orange_line.index('destination_stop')
