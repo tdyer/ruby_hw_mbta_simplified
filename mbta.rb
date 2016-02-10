@@ -5,48 +5,23 @@ green_line = ['Haymarket', 'Government Center', 'Park Street', 'Boylston', 'Arli
 
 orange_line = ['North Station', 'Haymarket', 'Park Street', 'State Street', 'Downtown Crossing', 'Chinatown', 'Tufts Medical Center']
 
-#populate the hash
+# populate the hash
 mbta = {}
-mbta["red"] = redLine
-mbta["green"] = greenLine
-mbta["orange"] = orangeLine
+mbta["red"] = red_line
+mbta["green"] = green_line
+mbta["orange"] = orange_line
 
+# Get the user's origin line
 puts "Welcome to the MBTA!"
-puts "What line do you want to start on? red | orange | green: "
+print "What line do you want to start on? red | orange | green: "
 origin_line = gets.chomp!.downcase
 
-if origin_line == 'red'
+# Get the user's origin station
+# Simplified station selector
+print "What station do you want to get on on the #{origin_line} line?"
+origin_stop = gets.chomp!.downcase
 
-  puts  "What stop are you getting on at?
-  * Alewife
-  * Davis
-  * Porter
-  * Harvard
-  * Central
-  * Kendall/MIT
-  * Park Street
-  * South Station"
-elsif origin_line == 'orange'
-  puts "What stop are you getting on at?
-  * North Station
-  * Haymarket
-  * Park Street
-  * State Street
-  * Downtown Crossing
-  * Chinatown
-  * Tufts Medical Center"
-elsif origin_line == 'green'
-  puts "What stop are you getting on at?
-  * Haymarket
-  * Government Center
-  * Park Street
-  * Boylston
-  * Arlington
-  * Copley"
-end
-  origin_stop = gets.chomp!.capitalize.to_s
-  origin_stop = red[origin_stop] || green[origin_stop] || orange[origin_stop]
-
+#Get the user's destination station
 puts "What line do you want to end on? red | orange | green: "
 destination_line = gets.chomp!.to_s
 
